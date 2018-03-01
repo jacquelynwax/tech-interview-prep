@@ -14,7 +14,6 @@ export const getFlashWords = (seconds) => dispatch =>
   axios.get('api/flashwords')
     .then(res => generateRandomFlashWords(seconds, res.data))
     .then(flashWords => dispatch(setFlashWords(flashWords)))
-    // .then(res => dispatch(setFlashWords(res.data)))
     .catch(err => console.log(err))
 
 export default function (state = defaultFlashWords, action) {

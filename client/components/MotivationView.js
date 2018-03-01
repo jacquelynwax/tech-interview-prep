@@ -20,7 +20,7 @@ class MotivationView extends Component {
   render () {
     return (
       <div className="flex-container">
-        <FlashWords />
+        <Hero />
       </div>
     )
   }

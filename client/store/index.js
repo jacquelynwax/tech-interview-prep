@@ -4,8 +4,9 @@ import thunkMiddleware from 'redux-thunk'
 import { composeWithDevTools } from 'redux-devtools-extension'
 import user from './user'
 import flashWords from './flashWords'
+import heros from './heros'
 
-const reducer = combineReducers({ user, flashWords })
+const reducer = combineReducers({ user, flashWords, heros })
 const middleware = composeWithDevTools(applyMiddleware(
   thunkMiddleware,
   createLogger({collapsed: true})
@@ -15,3 +16,4 @@ const store = createStore(reducer, middleware)
 export default store
 export * from './user'
 export * from './flashWords'
+export * from './heros'

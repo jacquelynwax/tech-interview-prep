@@ -15,7 +15,7 @@ class FlashWords extends Component {
 
   /* when the component mounts, load a random set of flashWords and toggle through the array in 3s intervals */
   componentDidMount() {
-    this.props.loadFlashWords(60)
+    this.props.loadFlashWords(seconds)
     this.intervalId = setInterval(this.toggleFlashWords.bind(this), 3000)
   }
 
